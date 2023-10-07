@@ -17,8 +17,9 @@ yarn build
 ```
 
 ## Backlog
-- Introduce scripts (clean, start, test)
+- Introduce scripts (clean ✅, start, test)
 - Implement full [tutorial](https://docs.aztec.network/dev_docs/getting_started/sandbox)
 - Faster compilation with SWC
 - Add React support
-
+- Add Github actions
+- Add development/production environments
