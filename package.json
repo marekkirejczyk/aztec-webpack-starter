@@ -12,8 +12,10 @@
   "license": "ISC",
   "devDependencies": {
     "@types/lodash": "^4.14.199",
+    "@types/node": "^20.8.3",
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2",
@@ -21,6 +23,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "@aztec/aztec.js": "^0.8.7",
+    "@aztec/noir-contracts": "^0.8.7"
   }
 }

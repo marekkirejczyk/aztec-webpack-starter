@@ -1,11 +1,17 @@
-import * as _ from 'lodash';
 
-function component() {
+import {createPXEClient, waitForSandbox,} from '@aztec/aztec.js';
+
+const PXE_URL = 'http://localhost:8080';
+
+async function component() {
     const element = document.createElement('div');
-
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
+    const pxe = createPXEClient(PXE_URL);
+    await waitForSandbox(pxe);
+    const nodeInfo = await pxe.getNodeInfo();
+    element.innerHTML = JSON.stringify(nodeInfo);
     return element;
 }
 
-document.body.appendChild(component());
+component().then((component) => {
+    document.body.appendChild(component);
+});
